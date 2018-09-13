@@ -1,0 +1,7 @@
+{
+  "name": "EasyHabib",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
