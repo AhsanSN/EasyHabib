@@ -1,10 +1,24 @@
 <ion-header>
     <ion-navbar color="header">
       <ion-title>Spaces</ion-title>
+      <ion-buttons start>
+          <button ion-button icon-only>
+              <button ion-button>Search Classroom</button>
+              <button ion-button>Search Faculty Pod</button>
+          </button>
+        </ion-buttons>
+      
     </ion-navbar>
   </ion-header>
   
-  <ion-content padding style="background: #7c4dff;">
-      <button ion-button>Malang Cafe</button>
+  <ion-content style="background: #7c4dff;">
+    <p text-left padding-left style="color: #ffffff;">
+      Search Faculty Pod: Find where a Faculty Pod is located by entering the instructor's name. 
+    </p>
+    <p text-left padding-left style="color: #ffffff;">
+        Search Classroom: Get details about a Classroom, including the location, and the timetable for the day.
+      </p>
+      <h2 text-center style="color: #ffffff;">Classroom Search</h2>
+      <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
   </ion-content>
   
