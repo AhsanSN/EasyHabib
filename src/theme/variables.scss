@@ -40,7 +40,7 @@ $colors: (
   light:      #f4f4f4,
   dark:       #222,
   header: (
-    base: #55acee,
+    base: #512DA8,
     contrast: #ffffff
   ),
   background: (
@@ -48,9 +48,14 @@ $colors: (
     contrast: #32db64
   ),
   tabs: (
-    base: #32db64,
+    base: #673AB7,
+    contrast: #ffffff
+  ),
+  cardsHome: (
+    base: #aa70c5,
     contrast: #ffffff
   )
+
 );
 
 
