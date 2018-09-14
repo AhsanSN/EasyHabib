@@ -38,8 +38,26 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  header: (
+    base: #512DA8,
+    contrast: #ffffff
+  ),
+  background: (
+    base: #32db64,
+    contrast: #32db64
+  ),
+  tabs: (
+    base: #673AB7,
+    contrast: #ffffff
+  ),
+  cardsHome: (
+    base: #aa70c5,
+    contrast: #ffffff
+  )
+
 );
+
 
 
 // App iOS Variables
@@ -59,6 +77,7 @@ $colors: (
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here
+
 
 
 
