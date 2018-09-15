@@ -11,16 +11,16 @@ export class DataService{
       this.tapalFoodItems.push(tapalFoodItem);
     }
 
-    addcafe2GoFoodItems(cafe2GoFoodItems: {title: string, price: string}) {
+    addcafe2GoFoodItem(cafe2GoFoodItems: {title: string, price: string}) {
       this.cafe2GoFoodItems.push(cafe2GoFoodItems);
     }
 
-    addmalangFoodItems(malangFoodItems: {title: string, price: string}) {
-      this.tapalFoodItems.push(malangFoodItems);
+    addmalangFoodItem(malangFoodItems: {title: string, price: string}) {
+      this.malangFoodItems.push(malangFoodItems);
     }
   
     //getting items
-    getTapalFoodItem() {
+    getTapalFoodItems() {
       return this.tapalFoodItems.slice();
     }
 

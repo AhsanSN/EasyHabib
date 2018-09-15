@@ -16,40 +16,53 @@ import { DataService } from "../../Services/data.service";
 })
 export class FoodPage {
 
-  tapalFoodItems: {title: string, price: string}[] = [];
+  foodItems: {title: string, price: string}[] = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private DataService: DataService) {
   }
 
   ionViewWillEnter() {
     console.log('loadedAgain FoodPage');
-    this.tapalFoodItems = this.DataService.getTapalFoodItem();
+    //this.foodItems = this.DataService.getTapalFoodItem();
   }
 
   ionViewDidLoad() {
-
     console.log('ionViewDidLoad FoodPage');
-    populateData();
-    this.tapalFoodItems = this.DataService.getTapalFoodItem();
+    this.populateData();
+    this.showCafeItems(1);
   }
 
   populateData(){
+
+    //can be added from any file
+    var a =  {title:"tapal", price:"120"};
+    var b =  {title:"cafe2Go", price:"400"};
+    var c =  {title:"malang", price:"80"};
+
+    this.DataService.addTapalFoodItem(a);
+    this.DataService.addTapalFoodItem(a);
+    this.DataService.addTapalFoodItem(a);
+
+    this.DataService.addcafe2GoFoodItem(b);
+    this.DataService.addcafe2GoFoodItem(b);
+    this.DataService.addcafe2GoFoodItem(b);
     
-    var a =  {title:"tapal", price:"12323"};
-    var b =  {title:"cacafe2God", price:"12323"};
-    var c =  {title:"malang", price:"12323"};
+    this.DataService.addmalangFoodItem(c);
+    this.DataService.addmalangFoodItem(c);
+    this.DataService.addmalangFoodItem(c);
+  }
 
-    this.DataService.addTapalFoodItem(a);
-    this.DataService.addTapalFoodItem(a);
-    this.DataService.addTapalFoodItem(a);
-
-    this.DataService.addcafe2GoFoodItems(b);
-    this.DataService.addcafe2GoFoodItems(b);
-    this.DataService.addcafe2GoFoodItems(b);
-
-    this.DataService.addmalangFoodItems(c);
-    this.DataService.addmalangFoodItems(c);
-    this.DataService.addmalangFoodItems(c);
+  showCafeItems(cafeNumber){
+    console.log("cafenumber",cafeNumber);
+    if (cafeNumber==1){
+      this.foodItems = this.DataService.getTapalFoodItems();
+    }
+    else if (cafeNumber==2){
+      this.foodItems = this.DataService.getcafe2GoFoodItems();
+    }
+    else if (cafeNumber==3){
+      this.foodItems = this.DataService.getmalangFoodItems();
+    }
   }
 
 }
