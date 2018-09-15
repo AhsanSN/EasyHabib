@@ -15,12 +15,12 @@ export class HomePage {
   }  
 
   ionViewWillEnter() {
-    console.log('loadedAgain FoodPage');
+    console.log('loadedAgain homePage');
     this.showAllNotf();
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FoodPage');
+    console.log('ionViewDidLoad homePage');
     this.populateData();
     this.showAllNotf();
   }
@@ -40,7 +40,6 @@ export class HomePage {
 
   showAllNotf(){
     this.homeScreenNotf = this.DataService.getAllHomeScreenNotf();
-    console.log(this.homeScreenNotf);
   }
 
 }
