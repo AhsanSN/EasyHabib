@@ -1,10 +1,13 @@
 export class DataService{
     
-    //food
+    /** Food related stuff. 
+     * contains local storage and functions to add and get from storage.
+     * Will be connected to a global storage using APIs.
+     */
+
     private tapalFoodItems: {title: string, price: string}[] = [];
     private cafe2GoFoodItems: {title: string, price: string}[] = [];
     private malangFoodItems: {title: string, price: string}[] = [];
-  
 
     //adding items
     addTapalFoodItem(tapalFoodItem: {title: string, price: string}) {
@@ -31,5 +34,21 @@ export class DataService{
     getmalangFoodItems() {
       return this.malangFoodItems.slice();
     }
+
+    /**HomeScreen Notifications
+     * contains local storage and functions to add and get from storage.
+     * Will be connected to a global storage using APIs.
+     */
+
+    private homeScreenNotf: {title: string, body: string, type: string, date: string}[] = [];
     
+    getAllHomeScreenNotf(){
+      return this.homeScreenNotf.slice();
+    }
+
+    addHomeScreenNotf(homeScreenNotf: {title: string, body: string, type: string, date: string}) {
+      this.homeScreenNotf.push(homeScreenNotf);
+    }
   }
+
+  

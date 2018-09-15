@@ -17,7 +17,7 @@ import { DataService } from "../../Services/data.service";
 export class FoodPage {
 
   foodItems: {title: string, price: string}[] = [];
-  CafeName: string = "Tapal Cafeteria Menu";
+  CafeName: string = "Tapal Cafeteria Today's Menu";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private DataService: DataService) {
   }
@@ -57,15 +57,15 @@ export class FoodPage {
     console.log("cafenumber",cafeNumber);
     if (cafeNumber==1){
       this.foodItems = this.DataService.getTapalFoodItems();
-      this.CafeName = "Tapal Cafeteria Menu";
+      this.CafeName = "Tapal Cafeteria Today's Menu";
     }
     else if (cafeNumber==2){
       this.foodItems = this.DataService.getcafe2GoFoodItems();
-      this.CafeName = "Cafe2Go Menu";
+      this.CafeName = "Cafe2Go Today's Menu";
     }
     else if (cafeNumber==3){
       this.foodItems = this.DataService.getmalangFoodItems();
-      this.CafeName = "Malang Cafe Menu";
+      this.CafeName = "Malang Cafe Today's Menu";
     }
   }
 
