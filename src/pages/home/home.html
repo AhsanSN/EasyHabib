@@ -5,15 +5,16 @@
 </ion-header>
 
 <ion-content style="background: #7c4dff;">
-  <ion-card color="cardsHome">
+  <ion-card color="cardsHome" *ngFor="let notf of homeScreenNotf">
       <ion-card-header>
-         Student Life
+         {{notf.title}}
       </ion-card-header>
       <ion-card-content>
-        A new event comming up on tuesday.  A new event comming up on tuesday.  A new event comming up on tuesday.  A new event comming up on tuesday.  A new event comming up on tuesday.  A new event comming up on tuesday.  A new event comming up on tuesday.
+        {{notf.body}}
         <br><br>
-        <h4>21st August 2018</h4>
+        <h4>{{notf.date}}</h4>
+        <button *ngIf=" notf.type == 'T_LV'" ion-button>Signup For Late Van</button>
       </ion-card-content>
-
     </ion-card>
 </ion-content>
+
