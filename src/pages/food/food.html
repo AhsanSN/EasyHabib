@@ -15,7 +15,7 @@
   <ion-content>
           <ion-item-group color="header">
             <ion-item-divider color="light">Cafeteria</ion-item-divider>
-            <ion-item *ngFor="let place of tapalFoodItems">{{ place.title }}</ion-item>
+            <ion-item *ngFor="let food of tapalFoodItems">{{ food.title }}<span><p text-right>Rs. {{ food.price }}</p></span></ion-item>
           </ion-item-group>
   </ion-content>
   

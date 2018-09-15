@@ -22,15 +22,34 @@ export class FoodPage {
   }
 
   ionViewWillEnter() {
+    console.log('loadedAgain FoodPage');
     this.tapalFoodItems = this.DataService.getTapalFoodItem();
   }
 
   ionViewDidLoad() {
+
     console.log('ionViewDidLoad FoodPage');
-    var a =  {title:"asdasd", price:"12323"}
+    populateData();
+    this.tapalFoodItems = this.DataService.getTapalFoodItem();
+  }
+
+  populateData(){
+    
+    var a =  {title:"tapal", price:"12323"};
+    var b =  {title:"cacafe2God", price:"12323"};
+    var c =  {title:"malang", price:"12323"};
+
     this.DataService.addTapalFoodItem(a);
     this.DataService.addTapalFoodItem(a);
     this.DataService.addTapalFoodItem(a);
+
+    this.DataService.addcafe2GoFoodItems(b);
+    this.DataService.addcafe2GoFoodItems(b);
+    this.DataService.addcafe2GoFoodItems(b);
+
+    this.DataService.addmalangFoodItems(c);
+    this.DataService.addmalangFoodItems(c);
+    this.DataService.addmalangFoodItems(c);
   }
 
 }
