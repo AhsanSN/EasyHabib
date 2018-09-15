@@ -15,8 +15,7 @@
   <ion-content>
           <ion-item-group color="header">
             <ion-item-divider color="light">Cafeteria</ion-item-divider>
-            <ion-item>Angola</ion-item>
-            <ion-item>Argentina</ion-item>
+            <ion-item *ngFor="let place of tapalFoodItems">{{ place.title }}</ion-item>
           </ion-item-group>
   </ion-content>
   

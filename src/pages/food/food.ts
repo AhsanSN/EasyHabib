@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { DataService } from "../../Services/data.service";
 
 /**
  * Generated class for the FoodPage page.
@@ -15,11 +16,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FoodPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  tapalFoodItems: {title: string, price: string}[] = [];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private DataService: DataService) {
+  }
+
+  ionViewWillEnter() {
+    this.tapalFoodItems = this.DataService.getTapalFoodItem();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FoodPage');
+    var a =  {title:"asdasd", price:"12323"}
+    this.DataService.addTapalFoodItem(a);
+    this.DataService.addTapalFoodItem(a);
+    this.DataService.addTapalFoodItem(a);
   }
 
 }
