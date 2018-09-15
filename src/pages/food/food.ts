@@ -24,7 +24,7 @@ export class FoodPage {
 
   ionViewWillEnter() {
     console.log('loadedAgain FoodPage');
-    //this.foodItems = this.DataService.getTapalFoodItem();
+    //items loaded using btn
   }
 
   ionViewDidLoad() {
