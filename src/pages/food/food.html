@@ -2,11 +2,11 @@
     <ion-navbar color="header">
       <ion-title>Food</ion-title>
       <ion-buttons start>
-          <button ion-button icon-only>
-              <button ion-button (click)="showCafeItems(1)">Tapal Cafeteria</button>
+        
+              <button ion-button (click)="showCafeItems(1)">Tapal</button>
               <button ion-button (click)="showCafeItems(2)">Cafe2Go</button>
-              <button ion-button>Malang Cafe</button>
-          </button>
+              <button ion-button (click)="showCafeItems(3)">Malang</button>
+          
         </ion-buttons>
       
     </ion-navbar>
@@ -14,7 +14,7 @@
   
   <ion-content>
           <ion-item-group color="header">
-            <ion-item-divider color="light">Cafeteria</ion-item-divider>
+            <ion-item-divider color="light">{{CafeName}}</ion-item-divider>
             <ion-item *ngFor="let food of foodItems">{{ food.title }}<span><p text-right>Rs. {{ food.price }}</p></span></ion-item>
           </ion-item-group>
   </ion-content>
