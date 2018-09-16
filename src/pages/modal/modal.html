@@ -6,8 +6,8 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>ModalPage</ion-title>
+  <ion-navbar  color="header">
+    <ion-title>{{message.title}}</ion-title>
     <ion-buttons end>
       <button ion-button (click)="closeModal()">Close</button>
       </ion-buttons>
@@ -16,6 +16,36 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content style="background: #e3e7ec;">
+  <p text-center>{{message.body}}</p>
+
+  <form *ngIf="message.type == 'T_LV'">
+
+    <ion-list>
+
+      <ion-item>
+        <ion-label stacked>Name</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label stacked>ID</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Drop Location</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-col col-3 text-center>
+          <div class="center">
+              <button ion-button type="submit">Submit Form</button>
+          </div>
+      </ion-col>
+
+    </ion-list>
+  </form>
 
 </ion-content>
+

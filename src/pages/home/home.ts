@@ -16,8 +16,9 @@ export class HomePage {
 
   }  
 
-  public openModal(){ 
-    var data = { message : 'hello world' };
+  public openModal(notf){ 
+    var data = { message : notf };
+    console.log("aa",data);
     var modalPage = this.modalCtrl.create('ModalPage', data); 
     modalPage.present(); 
   }
