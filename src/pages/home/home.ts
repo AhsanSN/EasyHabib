@@ -16,7 +16,11 @@ export class HomePage {
 
   }  
 
-  public openModal(){ var modalPage = this.modalCtrl.create('ModalPage'); modalPage.present(); }
+  public openModal(){ 
+    var data = { message : 'hello world' };
+    var modalPage = this.modalCtrl.create('ModalPage', data); 
+    modalPage.present(); 
+  }
 
   ionViewWillEnter() {
     console.log('loadedAgain homePage');

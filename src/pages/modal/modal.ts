@@ -21,6 +21,7 @@ export class ModalPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ModalPage');
+    console.log("message rec: ", this.navParams.get('message'));
   }
 
   public closeModal(){
