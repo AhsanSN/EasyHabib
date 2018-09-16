@@ -10,6 +10,7 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { SpacesPage } from '../pages/spaces/spaces';
 import { FoodPage } from '../pages/food/food';
+import { HomeModalPage } from '../pages/home-modal/home-modal';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,7 +23,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     TabsPage,
     SpacesPage,
-    FoodPage
+    FoodPage,
+    HomeModalPage   
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     TabsPage,
     SpacesPage,
-    FoodPage
+    FoodPage,
+    HomeModalPage
   ],
   providers: [
     StatusBar,

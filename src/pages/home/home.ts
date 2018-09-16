@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { DataService } from "../../Services/data.service";
+import { ModalController } from 'ionic-angular';
+
 
 @Component({
   selector: 'page-home',
@@ -10,9 +12,16 @@ export class HomePage {
 
   homeScreenNotf: {title: string, body: string, type: string, date: string}[] = [];
 
-  constructor(public navCtrl: NavController, private DataService: DataService) {
+  constructor(public navCtrl: NavController, private DataService: DataService, public modalCtrl: ModalController) {
 
   }  
+
+  public openModal(notf){ 
+    var data = { message : notf };
+    console.log("aa",data);
+    var modalPage = this.modalCtrl.create('ModalPage', data); 
+    modalPage.present(); 
+  }
 
   ionViewWillEnter() {
     console.log('loadedAgain homePage');

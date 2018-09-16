@@ -5,13 +5,20 @@
 </ion-header>
 
 <ion-content style="background: #e3e7ec;">
-  <ion-card color="cardsHome" *ngFor="let notf of homeScreenNotf">
-      <ion-card-header>
-         {{notf.title}}<span style="color: blue; font-size: 14px"> {{notf.date}}</span>
-      </ion-card-header>
-      <ion-card-content>
-        {{notf.body}}
-        <button *ngIf=" notf.type == 'T_LV'" ion-button>Signup For Late Van</button>
+  <ion-card (click)="openModal(notf);" color="cardsHome" *ngFor="let notf of homeScreenNotf">
+
+        <ion-card-header>
+          {{notf.title}}<span style="color: blue; font-size: 14px"> {{notf.date}}</span>
+        </ion-card-header>
+
+        <ion-card-content>
+          {{notf.body}}
+          <span>
+          <ion-buttons end>
+                <ion-icon name="md-arrow-round-forward"></ion-icon>
+          </ion-buttons>
+            </span>
+
       </ion-card-content>
     </ion-card>
 </ion-content>
