@@ -19,23 +19,23 @@
 <ion-content>
   <p text-center>{{message.body}}</p>
 
-  <form *ngIf="message.type == 'T_LV'">
+  <form *ngIf="message.type == 'T_LV'" (ngSubmit)="submitVanForm()">
 
     <ion-list>
 
       <ion-item>
         <ion-label stacked>Name</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" [(ngModel)]="vanFormData.name" name="name"></ion-input>
       </ion-item>
 
       <ion-item>
           <ion-label stacked>ID</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="text" [(ngModel)]="vanFormData.id" name="id"></ion-input>
         </ion-item>
 
       <ion-item>
         <ion-label stacked>Drop Location</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" [(ngModel)]="vanFormData.dropLocation" name="dropLocation"></ion-input>
       </ion-item>
 
       <ion-col col-3 text-center>
@@ -48,4 +48,5 @@
   </form>
 
 </ion-content>
+
 
