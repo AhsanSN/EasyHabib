@@ -1,10 +1,5 @@
-import { Storage } from '@ionic/storage';
-
 export class DataService{
 
-    constructor(private storage: Storage) { 
-
-    }
     
     /** Food related stuff. 
      * contains local storage and functions to add and get from storage.
@@ -56,16 +51,5 @@ export class DataService{
       this.homeScreenNotf.push(homeScreenNotf);
     }
 
-    test(){
-
-      // set a key/value
-      storage.set('name', 'Max');
-
-      // Or to get a key/value pair
-      storage.get('age').then((val) => {
-        console.log('Your age is', val);
-      });
-      
-    }
   }
 
