@@ -4,17 +4,14 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content style="background: #7c4dff;">
+<ion-content style="background: #e3e7ec;">
   <ion-card color="cardsHome" *ngFor="let notf of homeScreenNotf">
       <ion-card-header>
-         {{notf.title}}
+         {{notf.title}}<span style="color: blue; font-size: 14px"> {{notf.date}}</span>
       </ion-card-header>
       <ion-card-content>
         {{notf.body}}
-        <br><br>
-        <h4>{{notf.date}}</h4>
         <button *ngIf=" notf.type == 'T_LV'" ion-button>Signup For Late Van</button>
       </ion-card-content>
     </ion-card>
 </ion-content>
-
