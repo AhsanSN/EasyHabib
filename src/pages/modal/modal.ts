@@ -21,11 +21,6 @@ export class ModalPage {
 
   submitVanForm(){
     console.log("van form", this.vanFormData);
-    if ((this.vanFormData.name != undefined) && (this.vanFormData.id != undefined ) && (this.vanFormData.dropLocation!= undefined)){
-      if ((this.vanFormData.name.length > 0 ) && (this.vanFormData.id.length > 0 ) && (this.vanFormData.dropLocation.length > 0 )){
-        this.closeModal();
-      }
-    }
   }
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl : ViewController) {
