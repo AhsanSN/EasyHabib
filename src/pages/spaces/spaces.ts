@@ -15,11 +15,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SpacesPage {
 
+  spaceName: string = "Classroom";
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SpacesPage');
+    this.showSpace(1);
   }
 
+  showSpace(spaceNumber){
+    if (spaceNumber==1){
+      this.spaceName = "Classroom";
+    }
+    if (spaceNumber==2){
+      this.spaceName = "Faculty Pod";
+    }
+
+  }
 }
